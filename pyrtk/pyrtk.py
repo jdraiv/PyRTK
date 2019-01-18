@@ -17,7 +17,7 @@ def create_token(user_id, key):
 def decode_token(token, key):
     cipher_suite = Fernet(key)
     try:
-        key = eval(cipher_suite.decrypt(str.encode(rtk)).decode("utf-8"))
+        key = eval(cipher_suite.decrypt(str.encode(token)).decode("utf-8"))
         return key
     except:
         return 'Incorrect token or key'
