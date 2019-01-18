@@ -24,3 +24,11 @@ import pyjwt
 '{'user_id': 'userID', 'created': 1547771656.802478}'
 
 ```
+
+
+Please note that the secret key must be urlsafe base64 encoded. You can use the function `generate_key()` to generate a random key.
+
+```python
+>>> key = pyrtk.generate_key()
+b'hSwQxJETF2ISuk4fgUNmP1k8r1JkcSz2Ijrq8_wa_ws='
+```
