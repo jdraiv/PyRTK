@@ -15,7 +15,7 @@ $ pipenv install pyrtk
 ## Usage
 
 ```python
-import pyjwt
+import pyrtk
 
 >>> refresh_token = pyrtk.create_token('userID', 'secretKey')
 'gAAAAABcQR8IVD6nGbVItVUvgtzFM-eKnTVz2F00LwVHydXF0X4xv6WTRDPiEJax2Y342LTPxu2sWD6t83CyZFHY0g_-etcC_6g7JzzJ4IeWyL7MCHGvEWkPxEKETRCoYcnpJfM9MsxmfR5LDLArz3IYcnh85PC2sA=='
