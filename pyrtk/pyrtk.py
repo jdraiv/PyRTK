@@ -4,18 +4,15 @@ from datetime import datetime
 import json
 
         
-# Requirements
-def create_token(user_id, key):
+def create_token(user_dic, key):
     cipher_suite = Fernet(key)
-    user_dic = {'user_id': user_id, 'created': datetime.today().timestamp()}
-    
-    encrypted_data = cipher_suite.encrypt(str.encode(json.dumps(user_dic))).decode("utf-8")
 
-    return encrypted_data
+    return cipher_suite.encrypt(str.encode(json.dumps(user_dic))).decode("utf-8")
 
 
 def decode_token(token, key):
     cipher_suite = Fernet(key)
+    
     try:
         key = eval(cipher_suite.decrypt(str.encode(token)).decode("utf-8"))
         return key
