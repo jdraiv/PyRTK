@@ -17,11 +17,11 @@ $ pipenv install pyrtk
 ```python
 import pyrtk
 
->>> refresh_token = pyrtk.create_token('userID', 'secretKey')
-'gAAAAABcQR8IVD6nGbVItVUvgtzFM-eKnTVz2F00LwVHydXF0X4xv6WTRDPiEJax2Y342LTPxu2sWD6t83CyZFHY0g_-etcC_6g7JzzJ4IeWyL7MCHGvEWkPxEKETRCoYcnpJfM9MsxmfR5LDLArz3IYcnh85PC2sA=='
+>>> refresh_token = pyrtk.create_token({'identity': 'tester'}, 'secretKey')
+'gAAAAABcetXLTFVJO_BjCHVF5xKKwCj1goqiU9uR4osHwxqNJ6Mnl1YWvQn-m6EjPs3wyIjsoB3-R70rj7XFl2GuU5u6Q-3Z7tSa1VeDVDiEHPL50hxa0SEMunwqT5lyc8XkyT-A8zdt'
 
 >>> decoded_token = pyrtk.decode_token(refresh_token, 'secretKey')
-'{'user_id': 'userID', 'created': 1547771656.802478}'
+{'identity': 'tester'}
 
 ```
 
